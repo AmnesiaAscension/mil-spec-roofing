@@ -16,15 +16,13 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Google GenAI Import Map -->
-    <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.559.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/"
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
@@ -35,7 +33,7 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <!-- Logo -->
-            <a href="#home" class="flex items-center cursor-pointer group">
+            <a href="index.html" class="flex items-center cursor-pointer group">
                 <div class="flex flex-col items-center">
                     <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto">
                         <path d="M20 50 L80 10" stroke="#4b5563" stroke-width="6" stroke-linecap="round" />
@@ -49,23 +47,24 @@
             </a>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8" id="desktop-menu">
-                <a href="#home" class="nav-link text-sm font-bold uppercase tracking-wide text-blue-600 transition-colors duration-200">Home</a>
-                <a href="#services" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Services</a>
-                <a href="#about" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">About</a>
-                <a href="#gallery" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Gallery</a>
-                <a href="#contact" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
+            <div class="hidden lg:flex space-x-6" id="desktop-menu">
+                <a href="index.html" class="nav-link text-sm font-bold uppercase tracking-wide text-blue-600 transition-colors duration-200">Home</a>
+                <a href="index.html#services" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Services</a>
+                <a href="general-construction.html" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">General Construction</a>
+                <a href="index.html#about" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">About</a>
+                <a href="index.html#gallery" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Gallery</a>
+                <a href="index.html#contact" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
             </div>
 
             <!-- CTA Button -->
-            <div class="hidden md:block">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
+            <div class="hidden lg:block">
+                <a href="index.html#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
                     Get Estimate
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle -->
-            <div class="md:hidden">
+            <div class="lg:hidden">
                 <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none">
                     <i data-lucide="menu" class="h-6 w-6"></i>
                 </button>
@@ -73,14 +72,15 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
             <div class="flex flex-col p-4 space-y-4">
-                <a href="#home" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
-                <a href="#services" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
-                <a href="#about" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
-                <a href="#gallery" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
-                <a href="#contact" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
-                <a href="#contact" class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get Free Estimate</a>
+                <a href="index.html" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
+                <a href="index.html#services" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
+                <a href="general-construction.html" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">General Construction</a>
+                <a href="index.html#about" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
+                <a href="index.html#gallery" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
+                <a href="index.html#contact" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
+                <a href="index.html#contact" class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get Free Estimate</a>
             </div>
         </div>
     </nav>
@@ -155,8 +155,86 @@
                     </p>
                 </div>
 
+                <!-- Services Grid (Static HTML to prevent load issues) -->
                 <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Services will be populated by JS -->
+                    
+                    <!-- Service 1: Residential -->
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="residential">
+                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                            <i data-lucide="home" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Residential Roofing</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Complete roof replacements using premium asphalt, metal, or tile materials with industry-leading warranties.</p>
+                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                            View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </div>
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                    </div>
+
+                    <!-- Service 2: Commercial -->
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="commercial">
+                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                            <i data-lucide="hard-hat" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Commercial Roofing</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Flat roof solutions (TPO, EPDM) designed for durability and energy efficiency for your business.</p>
+                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                            View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </div>
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                    </div>
+
+                    <!-- Service 3: Repair -->
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="repair">
+                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                            <i data-lucide="wrench" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Storm Damage Repair</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Rapid response teams for leak detection, shingle replacement, and emergency storm damage mitigation.</p>
+                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                            View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </div>
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                    </div>
+
+                    <!-- Service 4: Inspection -->
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="inspection">
+                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                            <i data-lucide="shield" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Mil-Spec Inspection</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Detailed 21-point roof inspections to identify potential issues before they become costly failures.</p>
+                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                            View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </div>
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                    </div>
+
+                    <!-- Service 5: Gutters -->
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="gutters">
+                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                            <i data-lucide="ruler" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Gutters & Siding</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Seamless gutter installation and premium siding solutions to protect your home's exterior envelope.</p>
+                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                            View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </div>
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                    </div>
+
+                    <!-- Service 6: Insurance -->
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="insurance">
+                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                            <i data-lucide="umbrella" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Insurance Claims</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">We navigate the complex insurance process for you, ensuring you get the full coverage you deserve.</p>
+                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                            View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                        </div>
+                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -260,7 +338,7 @@
                 </div>
 
                 <div class="max-w-4xl mx-auto relative">
-                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden min-h-[300px] flex flex-col justify-center">
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden min-h-[350px] flex flex-col justify-center">
                         <div class="absolute top-8 left-8 text-blue-100 transform rotate-180 pointer-events-none">
                             <i data-lucide="quote" class="h-24 w-24"></i>
                         </div>
@@ -268,15 +346,17 @@
                         <div id="testimonial-content" class="relative z-10 transition-opacity duration-500 ease-in-out">
                             <!-- Populated by JS -->
                         </div>
-                    </div>
 
-                    <button id="prev-testimonial" class="absolute top-1/2 -left-4 md:-left-12 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg border border-slate-100 text-slate-700 hover:text-blue-600 hover:scale-110 transition-all z-20">
-                        <i data-lucide="chevron-left" class="h-6 w-6"></i>
-                    </button>
-                    
-                    <button id="next-testimonial" class="absolute top-1/2 -right-4 md:-right-12 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg border border-slate-100 text-slate-700 hover:text-blue-600 hover:scale-110 transition-all z-20">
-                        <i data-lucide="chevron-right" class="h-6 w-6"></i>
-                    </button>
+                         <!-- Testimonial Controls -->
+                         <div class="flex justify-center gap-4 mt-8 z-20">
+                            <button id="prev-testimonial" class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105">
+                                <i data-lucide="arrow-left" class="h-5 w-5"></i>
+                            </button>
+                            <button id="next-testimonial" class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105">
+                                <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -295,14 +375,15 @@
                                     <i data-lucide="phone" class="text-blue-500 h-6 w-6 mt-1"></i>
                                     <div>
                                         <h3 class="font-semibold">Phone</h3>
-                                        <p class="text-slate-300">(555) 123-4567</p>
+                                        <p class="text-slate-300">281-813-5925</p>
+                                        <p class="text-slate-500 text-sm">Mon-Fri 0800-1800</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start space-x-4">
                                     <i data-lucide="mail" class="text-blue-500 h-6 w-6 mt-1"></i>
                                     <div>
                                         <h3 class="font-semibold">Email</h3>
-                                        <p class="text-slate-300">ops@milspecroofing.com</p>
+                                        <p class="text-slate-300">info@mil-specroofing.com</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start space-x-4">
@@ -327,19 +408,40 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
-                                    <input type="text" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 outline-none" placeholder="John" />
+                                    <input type="text" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="John" />
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
-                                    <input type="text" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 outline-none" placeholder="Doe" />
+                                    <input type="text" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="Doe" />
                                 </div>
                             </div>
-                            <!-- More form fields... -->
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+                                    <input type="email" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="john@example.com" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-2">Phone</label>
+                                    <input type="tel" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="(555) 123-4567" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Service Type</label>
+                                <select class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-600">
+                                    <option>Roof Replacement</option>
+                                    <option>Repair / Leak</option>
+                                    <option>Inspection</option>
+                                    <option>Commercial Project</option>
+                                </select>
+                            </div>
+
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Mission Details</label>
-                                <textarea rows="4" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 outline-none" placeholder="Describe your project needs..."></textarea>
+                                <textarea rows="4" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="Describe your project needs..."></textarea>
                             </div>
-                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-md uppercase tracking-wider shadow-lg">
+                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-md uppercase tracking-wider shadow-lg hover:shadow-blue-500/30 transition-all">
                                 Send Request
                             </button>
                         </form>
@@ -352,9 +454,69 @@
     <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
         <div class="container mx-auto px-4">
-             <div class="flex flex-col md:flex-row justify-between items-center text-xs">
-                <p>&copy; 2024 Mil-Spec Roofing & Construction.</p>
-                <p class="mt-2 md:mt-0">Built for precision.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+              
+              <!-- Brand -->
+              <div>
+                <div class="flex items-center mb-6">
+                  <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto opacity-90">
+                    <path d="M20 50 L80 10" stroke="white" stroke-width="6" stroke-linecap="round" />
+                    <path d="M70 25 L95 45 L140 5" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M130 15 L190 50" stroke="white" stroke-width="6" stroke-linecap="round" />
+                    <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="white" letter-spacing="1">MIL-SPEC</text>
+                    <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14" fill="#94a3b8" letter-spacing="0.5">ROOFING</text>
+                    <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14" fill="#94a3b8" letter-spacing="0.5">& CONST.</text>
+                  </svg>
+                </div>
+                <p class="text-sm leading-relaxed mb-6">
+                  Dedicated to providing military-grade roofing solutions with precision, integrity, and unmatched durability.
+                </p>
+                <div class="flex space-x-4">
+                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="facebook" class="h-5 w-5"></i></a>
+                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="twitter" class="h-5 w-5"></i></a>
+                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="instagram" class="h-5 w-5"></i></a>
+                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+                </div>
+              </div>
+    
+              <!-- Links -->
+              <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
+                <ul class="space-y-3 text-sm">
+                  <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                </ul>
+              </div>
+    
+              <!-- Services -->
+              <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
+                <ul class="space-y-3 text-sm">
+                  <li><a href="#" class="hover:text-white transition-colors">Residential Roofing</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Commercial Roofing</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Storm Repair</a></li>
+                  <li><a href="#" class="hover:text-white transition-colors">Gutters & Siding</a></li>
+                </ul>
+              </div>
+    
+              <!-- Newsletter -->
+              <div>
+                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Stay Informed</h4>
+                <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
+                <div class="flex">
+                  <input type="email" placeholder="Email Address" class="bg-slate-900 border border-slate-800 text-white px-4 py-2 rounded-l-md outline-none focus:border-blue-600 w-full" />
+                  <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors">
+                    Go
+                  </button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+              <p>&copy; 2024 Mil-Spec Roofing & Construction. All rights reserved.</p>
+              <p class="mt-2 md:mt-0">Built for precision.</p>
             </div>
         </div>
     </footer>
@@ -380,37 +542,14 @@
         </div>
     </div>
 
-    <!-- AI Consultant Chat -->
-    <button id="ai-toggle-btn" class="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 hover:bg-blue-700 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110">
-        <i data-lucide="message-square" class="text-white h-6 w-6"></i>
-    </button>
-
-    <div id="ai-chat-window" class="fixed bottom-24 right-6 z-50 w-full max-w-sm bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[500px] hidden">
-        <div class="bg-slate-900 p-4 flex items-center space-x-3">
-            <div class="p-2 bg-blue-600 rounded-full"><i data-lucide="bot" class="text-white h-5 w-5"></i></div>
-            <div>
-                <h3 class="text-white font-bold text-sm">Sgt. Shingle</h3>
-                <p class="text-slate-400 text-xs">AI Roofing Consultant</p>
-            </div>
-        </div>
-        <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50">
-            <div class="flex justify-start">
-                <div class="bg-white text-slate-800 border border-slate-200 rounded-lg rounded-bl-none p-3 text-sm shadow-sm max-w-[80%]">
-                    Greetings. I'm Sgt. Shingle, your Mil-Spec roofing assistant. How can I help secure your perimeter today?
-                </div>
-            </div>
-        </div>
-        <div class="p-4 bg-white border-t border-slate-100">
-            <div class="flex items-center space-x-2">
-                <input type="text" id="chat-input" placeholder="Ask about roofing..." class="flex-1 bg-slate-100 border-none rounded-full px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none text-slate-900" />
-                <button id="chat-send-btn" class="p-2 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition-colors">
-                    <i data-lucide="send" class="h-4 w-4"></i>
-                </button>
-            </div>
-        </div>
-    </div>
+    <!-- Sticky CTA Button -->
+    <a href="index.html#contact" class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
+        <i data-lucide="clipboard-check" class="h-6 w-6 group-hover:animate-pulse"></i>
+        <span class="hidden md:inline">Get Free Estimate</span>
+        <span class="md:hidden">Estimate</span>
+    </a>
 
     <!-- Main Logic Script -->
-    <script type="module" src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
