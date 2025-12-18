@@ -8,7 +8,7 @@ const services: ServiceItem[] = [
     title: 'Residential Roofing',
     description: 'Complete roof replacements using premium asphalt, metal, or tile materials with industry-leading warranties.',
     iconName: 'Home',
-    longDescription: "Your home is your sanctuary, and the roof is its first line of defense. We specialize in high-performance residential roofing systems that blend aesthetic appeal with military-grade durability. Whether you prefer architectural shingles, impact-resistant synthetic slate, or standing seam metal, our installation process is rigorous, documented, and backed by a lifetime workmanship guarantee.",
+    longDescription: "Your home is your sanctuary, and the roof is its first line of defense. We specialize in high-performance residential roofing systems that blend aesthetic appeal with military-grade precision installation. Whether you prefer architectural shingles, impact-resistant synthetic slate, or standing seam metal, our installation process is rigorous, documented, and backed by a workmanship guarantee.",
     benefits: [
       "Lifetime Manufacturer Warranties",
       "Class 4 Impact Resistance Options",
@@ -42,7 +42,7 @@ const services: ServiceItem[] = [
     title: 'Storm Damage Repair',
     description: 'Rapid response teams for leak detection, shingle replacement, and emergency storm damage mitigation.',
     iconName: 'Wrench',
-    longDescription: "When nature strikes, time is the enemy. Our Rapid Response Team creates an immediate perimeter to prevent further water intrusion. We then perform a forensic-level assessment to document all damage for insurance purposes, ensuring nothing is overlooked. From hail dents to wind-lifted shingles, we restore the integrity of your shelter.",
+    longDescription: "When nature strikes, time is the enemy. Our Rapid Response Team creates an immediate barrier to prevent further water intrusion. We then perform a forensic-level assessment to document all damage for insurance purposes, ensuring nothing is overlooked. From hail dents to wind-lifted shingles, we restore the integrity of your shelter.",
     benefits: [
       "24/7 Emergency Tarping",
       "Forensic Damage Assessment",
@@ -59,7 +59,7 @@ const services: ServiceItem[] = [
     title: 'Mil-Spec Inspection',
     description: 'Detailed multipoint inspections to identify potential issues before they become costly failures.',
     iconName: 'Shield',
-    longDescription: "Don't wait for a leak to reveal a weakness. Our Mil-Spec multi-point inspection is a tactical assessment of your roof's integrity. We use drone technology and hands-on inspection to detect potential leak points and structural anomalies that the naked eye misses. You receive a comprehensive digital report with graded priorities.",
+    longDescription: "Don't wait for a leak to reveal a weakness. Our Mil-Spec 21-Point Inspection is a tactical assessment of your roof's integrity. We use drone technology and thermal imaging to detect subsurface moisture and structural anomalies that the naked eye misses. You receive a comprehensive digital report with graded priorities.",
     benefits: [
       "Drone Aerial Analysis",
       "Detailed Photo Report with Action Plan",
@@ -95,6 +95,7 @@ const services: ServiceItem[] = [
     longDescription: "The insurance battlefield is complex and bureaucratic. We act as your advocate, translating technical roofing data into the language adjusters understand. We ensure your policy is honored to its full extent, covering not just the roof, but all collateral damage including gutters, screens, and fences.",
     benefits: [
       "Xactimate Estimates (Industry Standard)",
+      "Code Upgrade Coverage Assistance",
       "Supplemental Damage Documentation",
       "Zero-Stress Paperwork Handling"
     ],
