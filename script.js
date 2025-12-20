@@ -1,11 +1,11 @@
-// --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Icons
+
+    // --- 1. Initialize Icons ---
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
-    // --- Data for Modals Only ---
+    // --- 2. Data: Services (For Modals) ---
     const serviceData = {
       residential: {
         title: 'Residential Roofing',
@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    // --- 3. Data: Gallery Images ---
     const galleryImages = [
         { title: 'Modern Estate Replacement', type: 'Residential', img: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
         { title: 'Commercial Complex', type: 'Commercial', img: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
@@ -54,13 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: 'Industrial Flat Roof', type: 'Commercial', img: 'https://images.pexels.com/photos/176342/pexels-photo-176342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
     ];
 
+    // --- 4. Data: Testimonials ---
     const testimonials = [
       { name: "Michael R.", role: "Homeowner", content: "The level of discipline this crew showed was incredible. They arrived at 0700 sharp, worked efficiently, and left my yard cleaner than they found it. The roof looks amazing.", rating: 5 },
       { name: "Sarah Jenkins", role: "Property Manager", content: "I manage 15 commercial properties. Mil-Spec is the only team I trust. Their reports are detailed, their pricing is transparent, and their work holds up to Texas storms.", rating: 5 },
       { name: "David Chen", role: "Business Owner", content: "We had a massive leak during the spring rains. Their rapid response team was onsite within 2 hours. They tarped it, quoted it, and fixed it within the week.", rating: 5 }
     ];
 
-    // --- Navbar Logic ---
+    // --- 5. Navbar Logic ---
     const navbar = document.getElementById('navbar');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -89,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Services Modal Logic ---
+    // --- 6. Services Modal Logic ---
     const serviceModal = document.getElementById('service-modal');
     const serviceModalContent = document.getElementById('service-modal-content');
     const closeModalOverlay = document.getElementById('close-modal-overlay');
@@ -128,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4 border-b pb-2">Key Benefits</h4>
                 <ul class="mb-8 list-none pl-0">${benefitsHtml}</ul>
                 <div class="flex gap-4">
-                     <button id="modal-req-btn" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-bold uppercase tracking-wider">Request This Service</button>
+                      <button id="modal-req-btn" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-bold uppercase tracking-wider">Request This Service</button>
                 </div>
             </div>
         `;
@@ -155,13 +157,14 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // --- Gallery Generation & Lightbox ---
+    // --- 7. Gallery Generation & Lightbox ---
     const galleryGrid = document.getElementById('gallery-grid');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
 
     if (galleryGrid && lightbox) {
+        galleryGrid.innerHTML = ''; // Ensure grid is clear before adding
         galleryImages.forEach(img => {
             const el = document.createElement('div');
             el.className = 'group relative rounded-lg overflow-hidden shadow-md cursor-pointer h-72';
@@ -195,46 +198,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Testimonials Carousel ---
-   // --- 1. Testimonials Data (This was missing!) ---
-    const testimonials = [
-      { 
-        name: "Michael R.", 
-        role: "Homeowner", 
-        content: "The level of discipline this crew showed was incredible. They arrived at 0700 sharp, worked efficiently, and left my yard cleaner than they found it. The roof looks amazing.", 
-        rating: 5 
-      },
-      { 
-        name: "Sarah Jenkins", 
-        role: "Property Manager", 
-        content: "I manage 15 commercial properties. Mil-Spec is the only team I trust. Their reports are detailed, their pricing is transparent, and their work holds up to Texas storms.", 
-        rating: 5 
-      },
-      { 
-        name: "David Chen", 
-        role: "Business Owner", 
-        content: "We had a massive leak during the spring rains. Their rapid response team was onsite within 2 hours. They tarped it, quoted it, and fixed it within the week.", 
-        rating: 5 
-      }
-    ];
-
-    // --- 2. Testimonials Logic ---
+    // --- 8. Testimonials Logic ---
     const testimonialContent = document.getElementById('testimonial-content');
     if (testimonialContent) {
         let currentTestimonial = 0;
 
         function updateTestimonial() {
-            // This line was crashing before because 'testimonials' didn't exist
-            const t = testimonials[currentTestimonial]; 
-            
-            // Create stars
+            const t = testimonials[currentTestimonial];
+            if (!t) return;
+
             const stars = Array(t.rating).fill('<i data-lucide="star" class="h-6 w-6 text-yellow-400 fill-current inline-block"></i>').join(' ');
             
-            // Fade out
             testimonialContent.style.opacity = '0';
-            
             setTimeout(() => {
-                // Update HTML
                 testimonialContent.innerHTML = `
                     <div class="flex justify-center mb-6 space-x-1">${stars}</div>
                     <p class="text-xl md:text-2xl text-slate-700 text-center font-medium leading-relaxed italic mb-8">"${t.content}"</p>
@@ -244,13 +220,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 
-                // Refresh icons and fade in
                 if (typeof lucide !== 'undefined') lucide.createIcons();
                 testimonialContent.style.opacity = '1';
             }, 200);
         }
 
-        // Button Listeners
         const nextBtn = document.getElementById('next-testimonial');
         const prevBtn = document.getElementById('prev-testimonial');
 
@@ -264,22 +238,20 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTestimonial();
         };
 
-        // Initialize
         updateTestimonial();
-
-        // Auto advance every 6 seconds
         setInterval(() => {
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             updateTestimonial();
         }, 6000);
     }
 
-    // --- Animated Counters ---
+    // --- 9. Animated Counters ---
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
+        // FIX: end must be a number (250), not "250+". The "+" goes in the suffix.
         const counters = [
-            { id: 'counter-years', end: 10},
-            { id: 'counter-missions', end: 250+, suffix: '' },
+            { id: 'counter-years', end: 10, suffix: '+' },
+            { id: 'counter-missions', end: 250, suffix: '+' },
             { id: 'counter-satisfaction', end: 100, suffix: '%' }
         ];
         let countersStarted = false;
@@ -291,7 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const el = document.getElementById(c.id);
                     if (!el) return;
                     
-                    let start = 0;
                     const duration = 2000;
                     const startTime = performance.now();
                     
@@ -301,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const easeOut = 1 - Math.pow(1 - progress, 4);
                         
                         const currentVal = Math.floor(easeOut * c.end);
-                        el.innerText = currentVal + (c.suffix || (c.id === 'counter-years' ? '+' : '')); // preserve suffix
+                        el.innerText = currentVal + (c.suffix || ''); 
                         
                         if (progress < 1) requestAnimationFrame(update);
                     }
