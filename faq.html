@@ -407,12 +407,16 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
-                <div>
-                    <a href="index.html" class="block mb-6">
-                        <img src="images/mil-spec roofing logo.png" 
-                             alt="Mil-Spec Roofing Logo" 
-                             class="h-16 w-auto object-contain opacity-90" />
-                    </a>
+                <!-- Brand -->
+<a href="index.html" class="flex items-center cursor-pointer group">
+    <div class="flex flex-col items-center">
+        <img 
+            src="images/mil-spec roofing logo.png" 
+            alt="Mil-Spec Roofing & Construction Logo" 
+            class="h-12 w-auto"
+        >
+    </div>
+</a>
                     <p class="text-sm leading-relaxed mb-6">
                         Dedicated to providing military-grade roofing solutions with precision, integrity, and unmatched
                         durability.
@@ -429,27 +433,29 @@
                     </div>
                 </div>
 
+                <!-- Links -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition-colors text-blue-500">FAQ</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
                     </ul>
                 </div>
 
+                <!-- Services -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-white transition-colors">Residential Roofing</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Commercial Roofing</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Storm Repair</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Gutters & Siding</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Roofing</a></li>
+                        <li><a href="general-construction.html" class="hover:text-white transition-colors">General
+                                Construction</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Storm Repair</a>
+                        </li>
                     </ul>
                 </div>
 
+                <!-- Newsletter -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Stay Informed</h4>
                     <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
@@ -470,7 +476,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- Main Logic Script -->
     <script src="script.js" defer></script>
