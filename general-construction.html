@@ -254,23 +254,12 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
-                <!-- Brand -->
                 <div>
-                    <div class="flex items-center mb-6">
-                        <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="h-12 w-auto opacity-90">
-                            <path d="M20 50 L80 10" stroke="white" stroke-width="6" stroke-linecap="round" />
-                            <path d="M70 25 L95 45 L140 5" stroke="#3b82f6" stroke-width="6" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M130 15 L190 50" stroke="white" stroke-width="6" stroke-linecap="round" />
-                            <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="white"
-                                letter-spacing="1">MIL-SPEC</text>
-                            <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14"
-                                fill="#94a3b8" letter-spacing="0.5">ROOFING</text>
-                            <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14"
-                                fill="#94a3b8" letter-spacing="0.5">& CONST.</text>
-                        </svg>
-                    </div>
+                    <a href="index.html" class="block mb-6">
+                        <img src="images/mil-spec roofing logo.png" 
+                             alt="Mil-Spec Roofing Logo" 
+                             class="h-16 w-auto object-contain opacity-90" />
+                    </a>
                     <p class="text-sm leading-relaxed mb-6">
                         Dedicated to providing military-grade roofing solutions with precision, integrity, and unmatched
                         durability.
@@ -287,30 +276,27 @@
                     </div>
                 </div>
 
-                <!-- Links -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
                     </ul>
                 </div>
 
-                <!-- Services -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="index.html#services" class="hover:text-white transition-colors">Roofing</a></li>
-                        <li><a href="general-construction.html" class="hover:text-white transition-colors">General
-                                Construction</a></li>
-                        <li><a href="index.html#services" class="hover:text-white transition-colors">Storm Repair</a>
-                        </li>
+                        <li><a href="#" class="hover:text-white transition-colors">Residential Roofing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Commercial Roofing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Storm Repair</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Gutters & Siding</a></li>
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Stay Informed</h4>
                     <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
@@ -332,15 +318,35 @@
         </div>
     </footer>
 
-    <!-- Sticky CTA Button -->
+    <div id="service-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" id="close-modal-overlay"></div>
+        <div
+            class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 animate-fade-in">
+            <div id="service-modal-content"></div>
+        </div>
+    </div>
+
+    <div id="lightbox"
+        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/95 backdrop-blur-md">
+        <button id="close-lightbox"
+            class="absolute top-6 right-6 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors z-50">
+            <i data-lucide="x" class="h-8 w-8"></i>
+        </button>
+        <div class="relative w-full max-w-5xl max-h-[90vh]">
+            <img id="lightbox-img" src="" class="w-full h-full max-h-[85vh] object-contain rounded-lg shadow-2xl" />
+            <div
+                class="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white text-center rounded-b-lg backdrop-blur-sm">
+                <h3 id="lightbox-caption" class="text-xl font-bold"></h3>
+            </div>
+        </div>
+    </div>
+
     <a href="index.html#contact"
-        class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
-        <i data-lucide="clipboard-check" class="h-6 w-6 group-hover:animate-pulse"></i>
-        <span class="hidden md:inline">Get Free Estimate</span>
-        <span class="md:hidden">Estimate</span>
+        class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
+        <i data-lucide="clipboard-check" class="h-5 w-5 md:h-6 md:w-6 group-hover:animate-pulse"></i>
+        <span class="text-xs md:text-base whitespace-nowrap">Get Free Estimate</span>
     </a>
 
-    <!-- Main Logic Script (Defer to wait for DOM) -->
     <script src="script.js" defer></script>
 </body>
 
